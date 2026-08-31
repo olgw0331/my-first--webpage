@@ -194,7 +194,7 @@ section {
   right: 0;
   top: -16px;
   display: block;
-  /* width: 100px; */
+  /* width: 100%; */
   height: 20px;
   background-color: #fff;
   z-index: 1;
@@ -204,9 +204,9 @@ section {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -20px;
+  bottom: -10px;
   display: block;
-  width: 100%;
+  /* width: 100%; */
   height: 123px;
   background: url("../assets/images/bg_wave.png") no-repeat center;
   background-size: contain;
@@ -279,7 +279,6 @@ section {
 }
 .info-box {
   position: relative;
-  height: 100%;
   flex: 1;
   padding-top: 110px;
 }
@@ -302,7 +301,7 @@ section {
   font-weight: 700;
   color: #fff;
   border-radius: 25px;
-  /* letter-spacing: 0; */
+  letter-spacing: 0;
 }
 .location {
   position: relative;
