@@ -46,8 +46,8 @@ const swHero = new Swiper(".sw-hero", {
       // console.log(activeSlide);
       const activeSlideImgUrl =
         activeSlide.querySelector(".slide-image img").src;
-      // console.log(activeSlideImg.src);
-      mainVisualBg.style.backgroundImage = `url(${activeSlideImg.src})`;
+      // console.log(activeSlideImgUrl.src);
+      mainVisualBg.style.backgroundImage = `url(${activeSlideImgUrl})`;
     },
   },
 });
@@ -63,9 +63,11 @@ playStopBtn.addEventListener("click", () => {
     swHero.autoplay.stop();
     console.log("자동재생 정지");
     playStopBtn.style.backgroundImage = `url(assets/icons/slide_play.png)`;
+    playStopBtn.textContent = "재생";
   } else {
     swHero.autoplay.start();
     console.log("자동재생 시작");
     playStopBtn.style.backgroundImage = `url(assets/icons/slide_stop.png)`;
+    playStopBtn.textContent = "정지";
   }
 });

@@ -174,7 +174,7 @@ section {
 /* 메인 영역 시작 */
 .main {
   width: 100%;
-  background-color: darkgoldenrod;
+  /* background-color: darkgoldenrod; */
 }
 
 .hero {
@@ -208,8 +208,8 @@ section {
   display: block;
   /* width: 100%; */
   height: 123px;
-  /* background: url("../assets/images/bg_wave.png") no-repeat center; */
-  background-size: contain;
+  background: url("../assets/images/bg_wave.png") no-repeat center;
+  background-size: 100% 100%;
   z-index: 1;
 }
 
@@ -439,11 +439,78 @@ section {
   border-radius: 50%;
 }
 
+.sw-hero .pagination .swiper-pagination {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 65px;
+  height: 30px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #fff;
+}
+.sw-hero .pagination .swiper-pagination .swiper-pagination-current {
+  /* color: #fff; */
+  font-weight: 700;
+}
+.sw-hero .pagination .swiper-pagination .page-total .swiper-pagination-total {
+  /* color: #fff; */
+}
+
+/* 추천축제 키워드 영역 */
 .keywords {
+  position: relative;
   width: 100%;
   height: 85px;
-  background-color: chartreuse;
+  /* background-color: chartreuse; */
 }
+.keywords .inner {
+  position: relative;
+}
+.keywords .keyvord-warp {
+  position: absolute;
+  top: -20px;
+  left: 0;
+
+  z-index: 10;
+}
+.keywords .keyvord-warp .keywords-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+}
+.keywords .keyvord-warp .keywords-title em {
+  font-width: 400;
+  font-style: normal;
+}
+.keywords .keyvord-warp ul {
+  position: relative;
+  margin-top: 27px;
+  display: flex;
+  gap: 12px;
+}
+.keywords .keyvord-warp ul li {
+  position: relative;
+}
+.keywords .keyvord-warp ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 16px;
+  color: #80808a;
+  border: 1px solid #80808a;
+  border-radius: 20px;
+}
+.keywords .keyvord-warp ul li:hover a {
+  background-color: #7a45e5;
+  color: #fff;
+}
+
 .rank {
   width: 100%;
   height: 384px;
