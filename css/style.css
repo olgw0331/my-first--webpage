@@ -93,7 +93,7 @@ section {
   justify-content: center;
   padding: 0 12px;
   width: fit-content;
-  height: 32px;
+  height: 34px;
   border-radius: 20px;
   border: 1px solid #7a45e5;
   color: #7a45e5;
@@ -570,8 +570,22 @@ section {
 .rank-list-wrap > ul:first-child {
   padding-right: 64px;
 }
+
+/* 중간 선 추가 */
+.rank-list-wrap > ul + ul::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 1px;
+  height: calc(100% - 32px);
+  background: #f2f2f7;
+}
+
 .rank-list-wrap > ul:last-child {
-  padding-right: 64px;
+  padding-left: 64px;
 }
 .rank-list-wrap > ul > li {
   position: relative;
@@ -656,17 +670,34 @@ section {
   width: 928px;
 }
 .festival .festival-prev-btn {
+  width: 10px;
+  height: 16px;
+  text-indent: -999px;
+  background: url("../assets/icons/main_slide_prev.png") 0 0 no-repeat;
+  background-size: 100%;
 }
 .festival .festival-next-btn {
+  width: 10px;
+  height: 16px;
+  text-indent: -999px;
+  background: url("../assets/icons/main_slide_next.png") 0 0 no-repeat;
+  background-size: 100%;
 }
 .festival .swiper-pagination {
   position: static;
-  width: auto;
+  /* width: auto; */
   margin: 0 16px;
+  width: 40px;
+  text-align: center;
 }
 .festival .swiper-pagination .swiper-pagination-current {
+  /* width: 10px; 원래는 줘야하나 수정한 부분에선 적용이 안됨*/
+  margin-right: 3px;
+  font-weight: 600;
 }
 .festival .swiper-pagination .swiper-pagination-total {
+  margin-left: 3px;
+  font-weight: 300;
 }
 
 .festival-slide {
@@ -685,14 +716,25 @@ section {
 }
 .sw-festival .swiper-wrapper {
 }
-.sw-festival .swiper-slide {
-}
+
 /* .sw-festival .swiper-slide:nth-child(odd) {
   margin-top: 50px;
 } */
+
+/* [추가 5] */
 /* ★ 새로 사용 */
 .sw-festival .swiper-slide[data-festival-position="down"] {
   margin-top: 50px;
+}
+
+.sw-festival .swiper-slide a {
+  border-radius: 10px;
+  overflow: hidden; /* 피그마에서는 Clip Content 체크에 해당 */
+}
+
+.sw-festival .swiper-slide.swiper-slide-active a {
+  border: 4px solid #7a45e5;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
 }
 
 /* 알리오 */

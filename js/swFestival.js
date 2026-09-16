@@ -10,7 +10,7 @@ const festivalSlides = [...festivalWrapper.querySelectorAll(".swiper-slide")];
 // 원본 슬라이드 개수 저장
 const festivalTotal = festivalSlides.length;
 
-// ★ 추가
+// [추가 4]
 // Swiper가 움직이기 전에
 // 원래 슬라이드 번호 기준으로 홀/짝 정보를 저장
 festivalSlides.forEach((slide, index) => {
@@ -29,13 +29,14 @@ festivalSlides.forEach((slide) => {
   festivalWrapper.appendChild(slide.cloneNode(true));
 });
 
-// [추가 5]
+// [추가 6]
 // 슬라이드 전체를 한 세트 복제
 festivalSlides.forEach((slide) => {
   festivalWrapper.appendChild(slide.cloneNode(true));
 });
 
 const swFestival = new Swiper(".sw-festival", {
+  speed: 350,
   loop: true,
 
   slidesPerView: 3.5,
@@ -50,7 +51,11 @@ const swFestival = new Swiper(".sw-festival", {
     renderCustom: function (swiper) {
       const current = (swiper.realIndex % festivalTotal) + 1;
 
-      return `${current} / ${festivalTotal}`;
+      return `
+      <span class="swiper-pagination-current">${current}</span>
+      /
+      <span class="swiper-pagination-total">${festivalTotal}</span>
+    `;
     },
   },
 
