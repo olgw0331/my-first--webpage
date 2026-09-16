@@ -672,14 +672,14 @@ section {
 .festival .festival-prev-btn {
   width: 10px;
   height: 16px;
-  text-indent: -999px;
+  text-indent: -9999px;
   background: url("../assets/icons/main_slide_prev.png") 0 0 no-repeat;
   background-size: 100%;
 }
 .festival .festival-next-btn {
   width: 10px;
   height: 16px;
-  text-indent: -999px;
+  text-indent: -9999px;
   background: url("../assets/icons/main_slide_next.png") 0 0 no-repeat;
   background-size: 100%;
 }
@@ -691,9 +691,11 @@ section {
   text-align: center;
 }
 .festival .swiper-pagination .swiper-pagination-current {
-  /* width: 10px; 원래는 줘야하나 수정한 부분에선 적용이 안됨*/
+  display: inline-block; /* ★ 추가 */
+  width: 10px;
   margin-right: 3px;
   font-weight: 600;
+  font-variant-numeric: tabular-nums; /* ★ 숫자 폭 일정하게 */
 }
 .festival .swiper-pagination .swiper-pagination-total {
   margin-left: 3px;
